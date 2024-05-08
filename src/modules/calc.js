@@ -5,6 +5,7 @@ import {
 const calc = (price = 1000) => {
 
     const calcBlock = document.getElementById('calc');
+
     const calcType = calcBlock.querySelector('#calc-type');
     const calcTypeMaterial = calcBlock.querySelector('#calc-type-material');   
     const calcSquare = calcBlock.querySelector('#calc-input');

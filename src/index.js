@@ -10,4 +10,7 @@ timerBlocks.forEach(timerBlock => {
     timer('13 may 2024', timerBlock)
 })
 scroll();
-calc();
+
+if (document.getElementById('calc')){
+    calc()
+};
