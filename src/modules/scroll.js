@@ -10,16 +10,16 @@ const scroll = () => {
 
     const heightVievScrollItem = offer.offsetTop + offer.offsetHeight
 
-    scrollItem.style.cssText = `display: none;
+    scrollItem.style.cssText = `pointer-events: none;
                                 opacity: 0;
                                 cursor: pointer`   
 
     window.addEventListener('scroll', () => {
         const top = rootElement.scrollTop       
         if (top  >= heightVievScrollItem && scrollItem.style.opacity == 0) {    
-            scrollItem.style.display = 'block'            
+            scrollItem.style.pointerEvents = 'auto'            
             animate({
-                duration: 500,
+                duration: 300,
                 timing(timeFraction) {
                     return timeFraction;
                 },
@@ -29,17 +29,15 @@ const scroll = () => {
             });   
         } else if (heightVievScrollItem > top && scrollItem.style.opacity == 1) {        
             animate({
-                duration: 500,
+                duration: 300,
                 timing(timeFraction) {
                     return timeFraction;
                 },
                 draw(progress) {
-                    scrollItem.style.opacity = 1- progress;
+                    scrollItem.style.opacity = 1 - progress;
                 }
-            });   
-            setTimeout(()=> {
-                scrollItem.style.display = 'none'
-            }, 500)     
+            });     
+            scrollItem.style.pointerEvents = 'none'        
         }
     })  
 
