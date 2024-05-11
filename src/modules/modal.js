@@ -29,9 +29,8 @@ const modal = (buttonClass, modalClass, closeClass) => {
     }) 
                
      
-    close.addEventListener('click', () => {        
-       
-
+    document.body.addEventListener('click', (e) => {               
+        if (e.target === close || e.target === overlay){
             overlay.style.cssText = `display: none;
                                     opacity: 0` 
             modal.style.cssText = `display: none;
@@ -53,9 +52,8 @@ const modal = (buttonClass, modalClass, closeClass) => {
                     modal.style.opacity = 1 - progress;
                 }
             }); */
-         
+        }         
     })
-
 };
 
 export default modal;

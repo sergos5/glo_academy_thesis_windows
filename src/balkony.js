@@ -17,9 +17,9 @@ modal('.call-button','.header-modal', '.header-modal__close');
 modal('.service-button','.services-modal', '.services-modal__close');
 
 sertificateModal()
-slider('#benefits', '.benefits-wrap', '.benefits__item','.benefits__arrow--left','.benefits__arrow--right', 3)
+slider('#benefits', '.benefits-wrap', '.benefits__item','.benefits__arrow--left','.benefits__arrow--right', 3, 573)
 
-slider('#services', '.services-wrap', '.services__item','.services__arrow--left','.services__arrow--right', 2)
+slider('#services', '.services-wrap', '.services__item','.services__arrow--left','.services__arrow--right', 2, 1200)
 
 
 
