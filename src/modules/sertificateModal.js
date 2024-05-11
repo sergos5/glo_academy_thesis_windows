@@ -32,7 +32,7 @@ const sertificateModal = () => {
                                         margin-right: -50%;
                                         transform: translate(-50%, -50%)" alt=""></img>`
                 animate({
-                    duration: 500,
+                    duration: 300,
                     timing(timeFraction) {
                         return timeFraction;
                     },

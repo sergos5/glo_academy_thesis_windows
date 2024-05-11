@@ -1,7 +1,7 @@
 import timer from './modules/timer';
 import scroll from './modules/scroll';
 import modal from './modules/modal';
-import sertificateModal from './modules/sertificate_modal'
+import sertificateModal from './modules/sertificateModal'
 import slider from './modules/slider';
 
 const timerBlocks = document.querySelectorAll('.countdown')
