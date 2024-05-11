@@ -7,11 +7,15 @@ import sendForm from './modules/sendForm';
 
 
 const timerBlocks = document.querySelectorAll('.countdown')
+const orderForm = document.querySelectorAll('.order-form')
 
-const orderForm = document.querySelector('.order-form')
+
 
 timerBlocks.forEach(timerBlock => {
     timer('13 may 2024', timerBlock)
+})
+orderForm.forEach((form) => {
+    sendForm(form)
 })
 
 scroll();
@@ -24,13 +28,4 @@ slider('#benefits', '.benefits-wrap', '.benefits__item','.benefits__arrow--left'
 
 slider('#services', '.services-wrap', '.services__item','.services__arrow--left','.services__arrow--right', 2, 1200)
 
-/* userForm.forEach((form) => {
-    sendForm({
-        formId: form.id,
-        someElem: [{
-            type: 'block',
-            id: 'total'
-        }]
-    });
-}); */
-sendForm(orderForm)
+
