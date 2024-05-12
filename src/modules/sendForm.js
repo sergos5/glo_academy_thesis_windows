@@ -1,7 +1,3 @@
-import {
-    animate
-} from './helpers.js';
-
 const sendForm = (form) => {
     const sendButton = form.querySelector('button')
 
@@ -63,7 +59,9 @@ const sendForm = (form) => {
         const userData = {}
         userData.name = inputName.value
         userData.phone = inputPhone.value
-        
+        if (document.querySelector('#calc-total')) {
+            userData.calc = document.querySelector('#calc-total').value
+        }          
 
         if (!checkData()) {            
             sendButton.textContent = loadText

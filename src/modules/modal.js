@@ -26,8 +26,7 @@ const modal = (buttonClass, modalClass, closeClass) => {
             });
 
         })
-    }) 
-               
+    })                
      
     document.body.addEventListener('click', (e) => {               
         if (e.target === close || e.target === overlay){
@@ -35,23 +34,6 @@ const modal = (buttonClass, modalClass, closeClass) => {
                                     opacity: 0` 
             modal.style.cssText = `display: none;
                                     opacity: 0` 
-
-        
-            /* setTimeout(() => {         
-                overlay.style.display = "none"; 
-                modal.style.display = "none"                
-            }, 200);     
-                
-            animate({
-                duration: 200,
-                timing(timeFraction) {
-                    return timeFraction;
-                },
-                draw(progress) {
-                    overlay.style.opacity = 1 - progress;
-                    modal.style.opacity = 1 - progress;
-                }
-            }); */
         }         
     })
 };

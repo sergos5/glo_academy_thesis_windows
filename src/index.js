@@ -5,11 +5,8 @@ import sertificateModal from './modules/sertificateModal'
 import slider from './modules/slider';
 import sendForm from './modules/sendForm';
 
-
 const timerBlocks = document.querySelectorAll('.countdown')
 const orderForm = document.querySelectorAll('.order-form')
-
-
 
 timerBlocks.forEach(timerBlock => {
     timer('13 may 2024', timerBlock)

@@ -3,10 +3,7 @@ const slider = (section, block, slide, left, right, count, widthWindow = 576) =>
     const slidesBlock = slidesSection.querySelector(block)
     let slideItems = slidesBlock.querySelectorAll(slide)
     const arrowLeft = slidesSection.querySelector(left)
-    const arrowRight = slidesSection.querySelector(right)
-
-   
-    //let interval;
+    const arrowRight = slidesSection.querySelector(right)    
             
     const updateSlide = () => {
         slideItems = slidesBlock.querySelectorAll(slide)
@@ -49,23 +46,6 @@ const slider = (section, block, slide, left, right, count, widthWindow = 576) =>
         updateSlide()
     }
 
-    
-    
-
-    /* const autoSlide = () => {
-        nextSlide()
-    };
-
-    const startSlide = (timer = 1500) => {
-        interval = setInterval(autoSlide, timer);
-    };
-
-    const stopSlide = () => {
-        clearInterval(interval);
-    };
- */
-
-
     slideItems.forEach((item) => { 
         item.style.display = 'none'
     })  
@@ -78,8 +58,7 @@ const slider = (section, block, slide, left, right, count, widthWindow = 576) =>
         prevSlide()
     })
 
-    updateSlide()
-    //startSlide()
+    updateSlide()   
 };
 
 export default slider;
