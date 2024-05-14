@@ -1,9 +1,9 @@
-const timer = (deadline, timerBlock) => {
-    
-    const timerDay = timerBlock.querySelector('.count_1 span')
-    const timerHours = timerBlock.querySelector('.count_2 span')
-    const timerMinutes = timerBlock.querySelector('.count_3 span')
-    const timerSeconds = timerBlock.querySelector('.count_4 span')
+const timer = (deadline) => {
+
+    const timerDay = document.querySelectorAll('.count_1 span')
+    const timerHours = document.querySelectorAll('.count_2 span')
+    const timerMinutes = document.querySelectorAll('.count_3 span')
+    const timerSeconds = document.querySelectorAll('.count_4 span')
 
     let clockInterval;
 
@@ -36,19 +36,37 @@ const timer = (deadline, timerBlock) => {
         };
 
         if (getTime.timeRemaining <= 0) {
-            timerDay.textContent = '00'
-            timerHours.textContent = '00';
-            timerMinutes.textContent = '00';
-            timerSeconds.textContent = '00';
+            timerDay.forEach(elem => {
+                elem.textContent = '00'
+            })
+            timerHours.forEach(elem => {
+                elem.textContent = '00'
+            })
+            timerMinutes.forEach(elem => {
+                elem.textContent = '00'
+            })
+            timerSeconds.forEach(elem => {
+                elem.textContent = '00'
+            })
+
             clearInterval(clockInterval);
         } else {
-            timerDay.textContent = addZero(getTime.day)
-            timerHours.textContent = addZero(getTime.hours);
-            timerMinutes.textContent = addZero(getTime.minutes);
-            timerSeconds.textContent = addZero(getTime.seconds);
-            clockInterval = setInterval(updateClock, 1000);
+            timerDay.forEach(elem => {
+                elem.textContent = addZero(getTime.day)
+            })
+            timerHours.forEach(elem => {
+                elem.textContent = addZero(getTime.hours)
+            })
+            timerMinutes.forEach(elem => {
+                elem.textContent = addZero(getTime.minutes)
+            })
+            timerSeconds.forEach(elem => {
+                elem.textContent = addZero(getTime.seconds)
+            })
+            clockInterval = setInterval(updateClock, 1000);            
         }
     };
+
     updateClock();
 
 };

@@ -4,6 +4,8 @@ import modal from './modules/modal';
 import sertificateModal from './modules/sertificateModal'
 import slider from './modules/slider';
 import sendForm from './modules/sendForm';
+import comments from './modules/comments';
+
 
 const timerBlocks = document.querySelectorAll('.countdown')
 const orderForm = document.querySelectorAll('.order-form')
@@ -26,3 +28,4 @@ slider('#benefits', '.benefits-wrap', '.benefits__item','.benefits__arrow--left'
 
 slider('#services', '.services-wrap', '.services__item','.services__arrow--left','.services__arrow--right', 2, 1200)
 
+comments()

@@ -1,4 +1,4 @@
-const slider = (section, block, slide, left, right, count, widthWindow = 576) => {
+const slider = (section, block, slide, left, right, count, widthWindow = 576, auto = false) => {
     const slidesSection = document.querySelector(section)
     const slidesBlock = slidesSection.querySelector(block)
     let slideItems = slidesBlock.querySelectorAll(slide)
@@ -41,6 +41,11 @@ const slider = (section, block, slide, left, right, count, widthWindow = 576) =>
         updateSlide()
     }
 
+    if(auto) {
+        setInterval(nextSlide, 1000)
+    }
+
+
     const prevSlide = () => {
         slideItems[0].before(slideItems[slideItems.length-1])
         updateSlide()
@@ -57,6 +62,9 @@ const slider = (section, block, slide, left, right, count, widthWindow = 576) =>
     arrowLeft.addEventListener('click', ()=> {
         prevSlide()
     })
+
+    
+
 
     updateSlide()   
 };
